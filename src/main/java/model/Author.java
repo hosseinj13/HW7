@@ -21,6 +21,12 @@ public class Author {
         this.books = books;
     }
 
+    public Author(String firstname, String lastname, Date age) {
+        this.firstName = firstname;
+        this.lastName = lastname;
+        this.age = age;
+    }
+
     public int getId() {
         return id;
     }

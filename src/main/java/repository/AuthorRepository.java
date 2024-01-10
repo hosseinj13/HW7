@@ -1,7 +1,9 @@
 package repository;
 
 import model.Author;
+
 import java.sql.*;
+
 import org.example.jdbcConnection;
 
 public class AuthorRepository {
@@ -21,6 +23,8 @@ public class AuthorRepository {
         preparedStatement.setString(1, author.getFirstName());
         preparedStatement.setString(2, author.getLastName());
         preparedStatement.setDate(3, (Date) author.getAge());
+        //preparedStatement.setDate(3, new java.sql.Date(author.getAge().getTime()));
+
         int result = preparedStatement.executeUpdate();
         if (result == 1)
             System.out.println(author.getFirstName() + " " + author.getLastName() + " successfully register :)");

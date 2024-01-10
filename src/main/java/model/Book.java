@@ -58,4 +58,17 @@ public class Book {
     public void setAuthor(Author author) {
         this.authorId = authorId;
     }
+
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", publicationYear=" + publicationYear +
+                ", authorId=" + authorId +
+                '}';
+    }
 }
+
+

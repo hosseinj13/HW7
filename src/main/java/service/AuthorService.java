@@ -23,8 +23,8 @@ public class AuthorService {
     public void findAuthor(int authorId) throws SQLException {
         Author author = authorRepository.load(authorId);
         if (author != null)
-            System.out.println("found  Author " + authorId);
+            System.out.println("found Author " + authorId);
         else
-            System.out.println("not found  Author " + authorId);
+            System.out.println("not found Author " + authorId);
     }
 }

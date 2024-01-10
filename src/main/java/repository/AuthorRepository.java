@@ -2,10 +2,8 @@ package repository;
 
 import model.Author;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+
 import org.example.jdbcConnection;
 
 public class AuthorRepository {
@@ -33,7 +31,21 @@ public class AuthorRepository {
 
     }
 
-    public Author load(int authorId){
-         return new Author();
+    public Author load(int authorId) throws SQLException {
+        Connection connection = jdbcConnection.getConnection();
+
+        String findUser = "SELECT * FROM authors WHERE author_id = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(findUser);
+        preparedStatement.setInt(1, authorId);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        if (resultSet.next()) {
+            int id = resultSet.getInt("author_id");
+            String firstname = resultSet.getString("first_name");
+            String lastname = resultSet.getString("last_name");
+            Date age = resultSet.getDate("age");
+            Author author = new Author(firstname, lastname, age);
+            return author;
+        } else
+            return null;
     }
 }

@@ -3,10 +3,8 @@ package repository;
 import model.Author;
 import model.Book;
 import org.example.jdbcConnection;
-
 import java.sql.*;
-import java.util.Iterator;
-import java.util.List;
+
 
 public class BookRepository {
 

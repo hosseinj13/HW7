@@ -7,4 +7,8 @@ public class BookRepository {
     public void save(Book book){
 
     }
+
+    public Book load(int bookId){
+        return new Book();
+    }
 }

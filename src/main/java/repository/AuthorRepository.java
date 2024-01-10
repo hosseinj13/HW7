@@ -31,6 +31,15 @@ public class AuthorRepository {
         else
             System.out.println("somethings is wrong :(");
 
+       /* if (result == 1) {
+            System.out.println(author.getFirstName() + " " + author.getLastName() + " successfully added :)");
+            ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
+            if (generatedKeys.next()) {
+                author.setId(generatedKeys.getInt(1));
+            }
+        } else {
+            System.out.println("Something went wrong :(");
+        }*/
     }
 
     public Author load(int authorId) throws SQLException {

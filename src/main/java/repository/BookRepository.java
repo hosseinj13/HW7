@@ -11,4 +11,8 @@ public class BookRepository {
     public Book load(int bookId){
         return new Book();
     }
+
+    public void delete(Book book){
+
+    }
 }

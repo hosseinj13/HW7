@@ -59,6 +59,7 @@ public class Author {
         this.age = age;
     }
 
+
     public List<Book> getBooks() {
         return books;
     }
@@ -66,4 +67,17 @@ public class Author {
     public void setBooks(List<Book> books) {
         this.books = books;
     }
+
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", books=" + books +
+                '}';
+    }
+
 }

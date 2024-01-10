@@ -1,9 +1,7 @@
 package repository;
 
 import model.Author;
-
 import java.sql.*;
-
 import org.example.jdbcConnection;
 
 public class AuthorRepository {

@@ -8,12 +8,12 @@ public class Author {
     private String firstName;
     private String lastName;
     private Date age;
-    private List<Book> books;
+    private Book[] books;
 
     public Author() {
     }
 
-    public Author(int id, String firstName, String lastName, Date age, List<Book> books) {
+    public Author(int id, String firstName, String lastName, Date age, Book[] books) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -59,15 +59,13 @@ public class Author {
         this.age = age;
     }
 
-
-    public List<Book> getBooks() {
+    public Book[] getBooks() {
         return books;
     }
 
-    public void setBooks(List<Book> books) {
+    public void setBooks(Book[] books) {
         this.books = books;
     }
-
 
     @Override
     public String toString() {

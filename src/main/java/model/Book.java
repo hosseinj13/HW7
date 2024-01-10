@@ -5,16 +5,26 @@ public class Book {
     private int id;
     private String title;
     private int publicationYear;
-    private Author author;
+    private int authorId;
 
     public Book() {
     }
 
-    public Book(int id, String title, int publicationYear, Author author) {
+    public Book(int id) {
+        this.id = id;
+    }
+
+    public Book(int id, String title, int publicationYear, int authorId) {
         this.id = id;
         this.title = title;
         this.publicationYear = publicationYear;
-        this.author = author;
+        this.authorId = authorId;
+    }
+
+    public Book(String title, int publicationYear, int authorId) {
+        this.title = title;
+        this.publicationYear = publicationYear;
+        this.authorId = authorId;
     }
 
     public int getId() {
@@ -41,11 +51,11 @@ public class Book {
         this.publicationYear = publicationYear;
     }
 
-    public Author getAuthor() {
-        return author;
+    public int getAuthor() {
+        return authorId;
     }
 
     public void setAuthor(Author author) {
-        this.author = author;
+        this.authorId = authorId;
     }
 }
